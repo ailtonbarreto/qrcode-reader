@@ -16,19 +16,30 @@ main{
     justify-content: space-between;
     align-items: center;
     height: 70vh;
-}
-
-video{
-    width: 90vw;
+    text-align: center;
 }
 
 #reader {
-    width: 300px;
-    margin-bottom: 20px;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qr-shaded-region{
+    border-style: none !important;
+}
+
+video {
+    width: 80vw !important;
+    height: 40vh; 
+    object-fit: cover; 
+    border-radius: 3vw; 
 }
 
 #resultado {
     width: 100%;
     padding: 12px;
-    font-size: 18px;
+    font-size: 1.5rem;
 }

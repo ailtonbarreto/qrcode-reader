@@ -41,7 +41,7 @@
         Html5Qrcode.getCameras().then(cameras => {
             if (cameras && cameras.length) {
                 html5QrCode.start(
-                    cameras[0].id, // usa a câmera traseira
+                    cameras[1].id, // usa a câmera traseira
                     {
                         fps: 10,
                         qrbox: 250
