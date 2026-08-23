@@ -26,7 +26,7 @@
         const conteudo = document.getElementById("resultado");
 
         function onScanSuccess(decodedText) {
-            conteudo.innerHTML = decodedText;
+            conteudo.innerHTML = `Resultado: ${decodedText}`;
 
             // vibra no celular ao detectar
             if (navigator.vibrate) navigator.vibrate(100);
