@@ -16,18 +16,17 @@
 
         <div id="reader"></div>
 
-        <input id="resultado" placeholder="Resultado do QR Code">
-
+        <p id="resultado">Resutado:</p>
 
     </main>
 
 
 
     <script>
-        const input = document.getElementById("resultado");
+        const conteudo = document.getElementById("resultado");
 
         function onScanSuccess(decodedText) {
-            input.value = decodedText;
+            conteudo.innerHTML = decodedText;
 
             // vibra no celular ao detectar
             if (navigator.vibrate) navigator.vibrate(100);
