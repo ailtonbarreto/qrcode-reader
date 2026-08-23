@@ -1,0 +1,15 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+#reader {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#resultado {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+}
