@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leitor de QR Code</title>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        #reader {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        #resultado {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Leitor de QR Code</h2>
+
+    <div id="reader"></div>
+
+    <input id="resultado" placeholder="Resultado do QR Code">
+
+    <script>
+        const input = document.getElementById("resultado");
+
+        function onScanSuccess(decodedText) {
+            input.value = decodedText;
+
+            // vibra no celular ao detectar
+            if (navigator.vibrate) navigator.vibrate(100);
+        }
+
+        function onScanError(errorMessage) {
+            console.log("Erro: ", errorMessage);
+        }
+
+        const html5QrCode = new Html5Qrcode("reader");
+
+        Html5Qrcode.getCameras().then(cameras => {
+            if (cameras && cameras.length) {
+                html5QrCode.start(
+                    cameras[0].id, // usa a câmera traseira
+                    {
+                        fps: 10,
+                        qrbox: 250
+                    },
+                    onScanSuccess,
+                    onScanError
+                );
+            }
+        }).catch(err => console.log(err));
+    </script>
+
+</body>
+
+</html>
