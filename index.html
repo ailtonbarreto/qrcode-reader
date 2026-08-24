@@ -12,11 +12,13 @@
 
     <main>
 
-        <h2>Leitor de QR Code</h2>
+        <!-- <h2>Leitor de QR Code</h2> -->
 
         <div id="reader"></div>
 
-        <p id="resultado">Resutado:</p>
+        <p>Resutado:</p>
+
+        <p id="resultado"></p>
 
     </main>
 
@@ -26,7 +28,7 @@
         const conteudo = document.getElementById("resultado");
 
         function onScanSuccess(decodedText) {
-            conteudo.innerHTML = `Resultado: ${decodedText}`;
+            conteudo.innerHTML = decodedText;
 
             // vibra no celular ao detectar
             if (navigator.vibrate) navigator.vibrate(100);

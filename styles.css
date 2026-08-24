@@ -13,7 +13,7 @@ body {
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 70vh;
     text-align: center;
@@ -38,8 +38,7 @@ video {
     border-radius: 3vw; 
 }
 
-#resultado {
+p {
     width: 100%;
     padding: 12px;
     font-size: 1.5rem;
-}
