@@ -21,11 +21,11 @@ main{
 }
 
 #reader {
-    width: 100vw;
     max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #qr-shaded-region{
@@ -36,7 +36,6 @@ video {
     width: 80vw !important;
     height: 40vh; 
     object-fit: cover; 
-    border-radius: 3vw; 
 }
 
 p {
