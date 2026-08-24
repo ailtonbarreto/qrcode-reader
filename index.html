@@ -41,18 +41,25 @@
         const html5QrCode = new Html5Qrcode("reader");
 
         Html5Qrcode.getCameras().then(cameras => {
-            if (cameras && cameras.length) {
-                html5QrCode.start(
-                    cameras[1].id, // usa a câmera traseira
-                    {
-                        fps: 10,
-                        qrbox: 250
-                    },
-                    onScanSuccess,
-                    onScanError
-                );
-            }
-        }).catch(err => console.log(err));
+            if (!cameras || cameras.length === 0) return;
+
+            // tenta achar a câmera traseira
+            const traseira = cameras.find(cam =>
+                cam.label.toLowerCase().includes("back")
+                || cam.label.toLowerCase().includes("traseira")
+                || cam.label.toLowerCase().includes("rear")
+            );
+
+            const cameraId = traseira ? traseira.id : cameras[0].id;
+
+            html5QrCode.start(
+                cameraId,
+                { fps: 10, qrbox: 250 },
+                onScanSuccess,
+                onScanError
+            );
+        });
+
     </script>
 
 </body>
