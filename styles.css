@@ -41,5 +41,6 @@ video {
 p {
     width: 100%;
     padding: 12px;
-    font-size: 1.5rem;
+    font-size: 8vw;
+    font-weight: bold;
 }
