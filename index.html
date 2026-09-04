@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <title>Leitor de QR Code</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/html5-qrcode"></script>
+    <!-- <script src="https://unpkg.com/html5-qrcode"></script> -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.4/html5-qrcode.min.js"></script>
+
+
 </head>
 
 <body>
@@ -60,6 +63,7 @@
             );
 
             const cameraId = traseira ? traseira.id : cameras[0].id;
+            
             html5QrCode.start(
                 cameraId,
                 {
