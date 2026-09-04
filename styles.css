@@ -4,27 +4,32 @@ body {
     background: #0173b4;
     color: #030303;
     font-family: Arial, sans-serif;
-}
-
-main {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 16px;
 }
 
 .leitor {
-    width: 100%;
+    height: 50vh;          /* metade da tela */
+    width: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #reader {
-    width: 100vw;
-    /* max-width: 480px; */
-    height: auto;
-    margin: 0 auto;
-    border-radius: 12px;
+    width: 100%;
+    height: auto;          /* ocupa 100% da área de vídeo */
     overflow: hidden;
+    border-radius: 0;      /* opcional */
 }
 
+.resultado {
+    height: 50vh;          /* outra metade da tela */
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: #ffffff33; /* opcional */
+    text-align: center;
+}
