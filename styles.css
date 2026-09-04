@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: #0173b4;
     color: #030303;
     font-family: Arial, sans-serif;
 }
@@ -21,20 +21,10 @@ main {
 
 #reader {
     width: 100vw;
-    max-width: 480px;
+    /* max-width: 480px; */
     height: auto;
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
 }
 
-@media (max-width: 480px) {
-    #reader {
-        height: 380px;
-    }
-}
-
-.resultado {
-    margin-top: 16px;
-    text-align: center;
-}
