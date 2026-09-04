@@ -51,13 +51,17 @@
             );
 
             const cameraId = traseira ? traseira.id : cameras[0].id;
-
             html5QrCode.start(
                 cameraId,
-                { fps: 10, qrbox: 250 },
+                {
+                    fps: 15,
+                    qrbox: 400,
+                    aspectRatio: 1.0
+                },
                 onScanSuccess,
                 onScanError
             );
+
         });
 
     </script>
