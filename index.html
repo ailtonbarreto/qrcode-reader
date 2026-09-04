@@ -63,17 +63,25 @@
             );
 
             const cameraId = traseira ? traseira.id : cameras[0].id;
-            
+
             html5QrCode.start(
                 cameraId,
                 {
                     fps: 15,
-                    qrbox: 400,
-                    aspectRatio: 1.0
+                    qrbox: 350,
+                    videoConstraints: {
+                        facingMode: "environment",
+                        focusMode: "continuous",
+                        advanced: [
+                            { focusMode: "continuous" },
+                            { zoom: 2 }   // opcional, melhora leitura de perto
+                        ]
+                    }
                 },
                 onScanSuccess,
                 onScanError
             );
+
 
         });
 
