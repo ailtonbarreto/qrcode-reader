@@ -24,17 +24,16 @@ main {
     border-radius: 10px;
 }
 
+
 #reader {
-    /* width: 100%;
-    max-width: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 420px;
-    height: 420px;
+    width: 100vw;        /* ocupa toda a largura */
+    max-width: 480px;    /* limite para não ficar gigante */
+    height: 480px;       /* altura grande */
     margin: 0 auto;
+    border-radius: 12px;
 }
+
+
 
 #qr-shaded-region {
     border-style: none !important;
