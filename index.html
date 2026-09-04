@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <title>Leitor de QR Code</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="https://unpkg.com/html5-qrcode"></script> -->
     <script src="https://unpkg.com/html5-qrcode@2.3.4/html5-qrcode.min.js"></script>
-
-
 </head>
 
 <body>
@@ -16,33 +13,21 @@
     <main>
 
         <div class="leitor">
-
             <div id="reader"></div>
-
-
         </div>
-
 
         <div class="resultado">
-
-            <p>Resutado:</p>
-
+            <p>Resultado:</p>
             <p id="resultado"></p>
-
         </div>
 
-
     </main>
-
-
 
     <script>
         const conteudo = document.getElementById("resultado");
 
         function onScanSuccess(decodedText) {
             conteudo.innerHTML = decodedText;
-
-            // vibra no celular ao detectar
             if (navigator.vibrate) navigator.vibrate(100);
         }
 
@@ -55,7 +40,6 @@
         Html5Qrcode.getCameras().then(cameras => {
             if (!cameras || cameras.length === 0) return;
 
-            // tenta achar a câmera traseira
             const traseira = cameras.find(cam =>
                 cam.label.toLowerCase().includes("back")
                 || cam.label.toLowerCase().includes("traseira")
@@ -68,23 +52,16 @@
                 cameraId,
                 {
                     fps: 15,
-                    qrbox: 350,
+                    qrbox: { width: 320, height: 320 },
+                    aspectRatio: 1.0,
                     videoConstraints: {
-                        facingMode: "environment",
-                        focusMode: "continuous",
-                        advanced: [
-                            { focusMode: "continuous" },
-                            { zoom: 2 }   // opcional, melhora leitura de perto
-                        ]
+                        facingMode: "environment"
                     }
                 },
                 onScanSuccess,
                 onScanError
             );
-
-
         });
-
     </script>
 
 </body>
