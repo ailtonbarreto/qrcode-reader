@@ -16,7 +16,7 @@ main {
 }
 
 .leitor {
-    height: 50vh;    
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ main {
 
 #reader {
     width: 100%;
-    height: 100%;        
+    height: 100%;
     overflow: hidden;
     background: #000;
 }
@@ -38,13 +38,16 @@ main {
 }
 
 .resultado {
-    height: 50vh;    
+    height: 50vh;
     width: 100%;
     padding: 16px;
     box-sizing: border-box;
     overflow-y: auto;
     text-align: center;
     font-size: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 
