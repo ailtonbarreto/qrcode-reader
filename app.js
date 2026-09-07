@@ -39,7 +39,7 @@ Html5Qrcode.getCameras().then(cameras => {
         cameraId,
         {
             fps: 15,
-            qrbox: 300,
+            qrbox: { width: 500, height: 500 },
             videoConstraints: {
                 facingMode: "environment",
                 width: { ideal: 640 },
