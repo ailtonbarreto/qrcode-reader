@@ -16,6 +16,7 @@ main {
 }
 
 .leitor {
+    height: 50vh;              /* METADE DA TELA */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -27,6 +28,13 @@ main {
     height: 100%;              /* vídeo ocupa 100% da área */
     overflow: hidden;
     background: #000;
+}
+
+/* CORREÇÃO DO VÍDEO */
+#reader video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
 
 .resultado {
