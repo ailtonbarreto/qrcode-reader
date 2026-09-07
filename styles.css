@@ -16,7 +16,7 @@ main {
 }
 
 .leitor {
-    height: 50vh;              /* METADE DA TELA */
+    height: 50vh;    
     width: 100%;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ main {
 
 #reader {
     width: 100%;
-    height: 100%;              /* vídeo ocupa 100% da área */
+    height: 100%;        
     overflow: hidden;
     background: #000;
 }
@@ -38,27 +38,28 @@ main {
 }
 
 .resultado {
-    height: 50vh;              /* outra metade */
+    height: 50vh;    
     width: 100%;
     padding: 16px;
     box-sizing: border-box;
     overflow-y: auto;
+    text-align: center;
+    font-size: 2rem;
 }
 
-/* força o container interno a ocupar toda a área */
+
 #reader__scan_region {
     width: 100% !important;
     height: 100% !important;
 }
 
-/* força o vídeo a preencher tudo */
+
 #reader__scan_region video {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
 }
 
-/* força o canvas (quando usado) a preencher tudo */
 #reader__scan_region canvas {
     width: 100% !important;
     height: 100% !important;

@@ -23,18 +23,7 @@ Html5Qrcode.getCameras().then(cameras => {
 
     const cameraId = traseira ? traseira.id : cameras[0].id;
 
-    // html5QrCode.start(
-    //     cameraId,
-    //     {
-    //         fps: 15,
-    //         qrbox: 700,
-    //         videoConstraints: {
-    //             facingMode: "environment"
-    //         }
-    //     },
-    //     onScanSuccess,
-    //     onScanError
-    // );
+
     html5QrCode.start(
         cameraId,
         {
