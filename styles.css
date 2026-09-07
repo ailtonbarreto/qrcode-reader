@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #0173b4;
+    background: #21cfe6;
     color: #030303;
     font-family: Arial, sans-serif;
     height: 100vh;
@@ -43,4 +43,24 @@ main {
     padding: 16px;
     box-sizing: border-box;
     overflow-y: auto;
+}
+
+/* força o container interno a ocupar toda a área */
+#reader__scan_region {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* força o vídeo a preencher tudo */
+#reader__scan_region video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* força o canvas (quando usado) a preencher tudo */
+#reader__scan_region canvas {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
